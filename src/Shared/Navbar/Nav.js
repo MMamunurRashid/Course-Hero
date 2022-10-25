@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import CH1 from "../../assets/logo/CH1.png";
+import { AuthContext } from "../../Contexts/AuthProvider/AuthProvider";
 
 const Nav = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {})
+      .catch((error) => console.error(error));
+  };
   return (
     <div className="">
       <div className="navbar bg-primary text-primary-content sm:px-20 pr-4">
@@ -111,9 +119,20 @@ const Nav = () => {
               </svg>
             </label>
           </div>
-          <Link className="btn ml-5" to="/login">
-            LogIn
-          </Link>
+          {user ? (
+            <p>{user.email}</p>
+          ) : (
+            <Link className="btn ml-5" to="/login">
+              LogIn
+            </Link>
+          )}
+          {user ? (
+            <Link onClick={handleLogOut} className="btn ml-5" to="">
+              Logout
+            </Link>
+          ) : (
+            <></>
+          )}
         </div>
       </div>
     </div>

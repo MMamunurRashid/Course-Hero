@@ -1,11 +1,47 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Contexts/AuthProvider/AuthProvider";
 
 const Register = () => {
+  const [passwordError, setPasswordError] = useState("");
+  const { createUser } = useContext(AuthContext);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const name = form.name.value;
+    const photoURL = form.photoURL.value;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(name, photoURL, email, password);
+
+    if (!/(?=.*[A-Z].*[A-Z])/.test(password)) {
+      setPasswordError("Please use at least 2 uppercase");
+      return;
+    }
+    if (!/(?=.[!@#&$*])/.test(password)) {
+      setPasswordError("Please use at least One spacial character");
+      return;
+    }
+    if (password.length < 6) {
+      setPasswordError("Password Should be 6 character");
+      return;
+    }
+    setPasswordError("");
+
+    createUser(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => console.error(error));
+  };
+
   return (
     <div className="w-4/5 m-auto  text-center ">
       <h1 className="text-5xl mb-10 mt-5">Please Register</h1>
-      <form>
+      <p className=" text-red-600">{passwordError}</p>
+      <form onSubmit={handleSubmit}>
         <div className="form-control w-full max-w-xs m-auto">
           <label className="label">
             <span className="label-text">Name</span>
@@ -17,8 +53,7 @@ const Register = () => {
             className="input input-bordered w-full max-w-xs "
             required
           />
-        </div>
-        <div className="form-control w-full max-w-xs m-auto">
+
           <label className="label">
             <span className="label-text">PhotoURL</span>
           </label>
@@ -29,8 +64,7 @@ const Register = () => {
             className="input input-bordered w-full max-w-xs "
             required
           />
-        </div>
-        <div className="form-control w-full max-w-xs m-auto">
+
           <label className="label">
             <span className="label-text">Email</span>
           </label>
@@ -41,8 +75,7 @@ const Register = () => {
             className="input input-bordered w-full max-w-xs "
             required
           />
-        </div>
-        <div className="form-control w-full max-w-xs m-auto">
+
           <label className="label">
             <span className="label-text">Password</span>
           </label>
@@ -61,9 +94,9 @@ const Register = () => {
           </Link>
         </p>
         <div className="mt-5 mb-10">
-          <Link>
-            <button className="btn btn-outline">Register</button>
-          </Link>
+          <button type="submit" className="btn btn-outline">
+            Register
+          </button>
         </div>
       </form>
     </div>
