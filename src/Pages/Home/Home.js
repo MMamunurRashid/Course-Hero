@@ -2,7 +2,7 @@ import React from "react";
 import CourseHero from "../../assets/banner/CourseHero.png";
 const Home = () => {
   return (
-    <div className="text-center mt-5">
+    <div className="text-center mt-5 sm:mx-20 sm:mb-40 mx-5 mb-5">
       <img className="w-full rounded-lg" src={CourseHero} alt="" />
       <h1 className="text-3xl font-serif mt-3 text-white">
         Welcome to Course Hero
