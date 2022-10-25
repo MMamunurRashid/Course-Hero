@@ -5,7 +5,7 @@ import { AuthContext } from "../../Contexts/AuthProvider/AuthProvider";
 
 const Nav = () => {
   const { user, logOut } = useContext(AuthContext);
-
+  console.log(user);
   const handleLogOut = () => {
     logOut()
       .then(() => {})
@@ -120,7 +120,16 @@ const Nav = () => {
             </label>
           </div>
           {user ? (
-            <p>{user.email}</p>
+            <div
+              className="tooltip tooltip-bottom cursor-pointer"
+              data-tip={user.displayName}
+            >
+              <img
+                className=" mask mask-circle w-12 h-12"
+                src={user.photoURL}
+                alt=""
+              />
+            </div>
           ) : (
             <Link className="btn ml-5" to="/login">
               LogIn

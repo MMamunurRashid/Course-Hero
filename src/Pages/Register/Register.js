@@ -1,10 +1,12 @@
+import { error } from "daisyui/src/colors";
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Contexts/AuthProvider/AuthProvider";
 
 const Register = () => {
-  const [passwordError, setPasswordError] = useState("");
-  const { createUser } = useContext(AuthContext);
+  const [error, setError] = useState(" ");
+
+  const { createUser, updateUserProfile } = useContext(AuthContext);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -16,31 +18,49 @@ const Register = () => {
     console.log(name, photoURL, email, password);
 
     if (!/(?=.*[A-Z].*[A-Z])/.test(password)) {
-      setPasswordError("Please use at least 2 uppercase");
+      setError("Please use at least 2 uppercase");
       return;
     }
     if (!/(?=.[!@#&$*])/.test(password)) {
-      setPasswordError("Please use at least One spacial character");
+      setError("Please use at least One spacial character");
       return;
     }
     if (password.length < 6) {
-      setPasswordError("Password Should be 6 character");
+      setError("Password Should be 6 character");
       return;
     }
-    setPasswordError("");
+    setError("");
 
     createUser(email, password)
       .then((result) => {
         const user = result.user;
         console.log(user);
+        setError("");
+        form.reset();
+        handleUpdateUserProfile(name, photoURL);
       })
-      .catch((error) => console.error(error));
+      .catch((error) => {
+        console.error(error);
+        setError(error.message);
+      });
   };
 
+  const handleUpdateUserProfile = (name, photoURL) => {
+    const profile = {
+      displayName: name,
+      photoURL: photoURL,
+    };
+    updateUserProfile(profile)
+      .then(() => {})
+      .catch((error) => {
+        console.error(error);
+        setError(error.message);
+      });
+  };
   return (
     <div className="w-4/5 m-auto  text-center ">
       <h1 className="text-5xl mb-10 mt-5">Please Register</h1>
-      <p className=" text-red-600">{passwordError}</p>
+      <p className=" text-red-600">{error}</p>
       <form onSubmit={handleSubmit}>
         <div className="form-control w-full max-w-xs m-auto">
           <label className="label">
