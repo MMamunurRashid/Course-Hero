@@ -2,9 +2,20 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../../Contexts/AuthProvider/AuthProvider";
+import { GoogleAuthProvider } from "firebase/auth";
 
 const Login = () => {
-  const { signIn } = useContext(AuthContext);
+  const { signIn, googleLogin } = useContext(AuthContext);
+  const googleProvider = new GoogleAuthProvider();
+
+  const handleGoogleLogin = () => {
+    googleLogin(googleProvider)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => console.error(error));
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -60,7 +71,7 @@ const Login = () => {
       </form>
 
       <div className="btn-group btn-group-vertical mb-10">
-        <button className="btn btn-primary mt-2">
+        <button onClick={handleGoogleLogin} className="btn btn-primary mt-2">
           <FaGoogle className="mr-3 w-6 h-6" /> Login with Google
         </button>
         <button className="btn btn-primary mt-2">
