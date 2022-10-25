@@ -30,6 +30,12 @@ const Login = () => {
           required
         />
       </div>
+      <p className="mt-3 mb-5">
+        You have already an account?{" "}
+        <Link className=" text-blue-700" to="/register">
+          Please Register
+        </Link>
+      </p>
       <div className="mt-5 mb-10">
         <Link>
           <button className="btn btn-outline">Login</button>
