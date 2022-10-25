@@ -1,5 +1,6 @@
 import React from "react";
-import Home from "../Pages/Home/Home";
+import { Outlet } from "react-router-dom";
+
 import Footer from "../Shared/Footer/Footer";
 import Nav from "../Shared/Navbar/Nav";
 
@@ -14,7 +15,7 @@ const Main = () => {
           <Sidebar></Sidebar>
         </div>
         <div className="sm:col-span-9 m-2 sm:m-0">
-          <Home></Home>
+          <Outlet></Outlet>
         </div>
       </div>
       <Footer></Footer>

@@ -29,13 +29,13 @@ const Nav = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <Link>Courses</Link>
+                <Link to="/courses">Courses</Link>
               </li>
               <li>
-                <Link>FAQ</Link>
+                <Link to="/faq">FAQ</Link>
               </li>
               <li>
-                <Link>Blog</Link>
+                <Link to="/blog">Blog</Link>
               </li>
               <div className="ml-3">
                 <label className="swap swap-rotate">
@@ -60,21 +60,32 @@ const Nav = () => {
               </div>
             </ul>
           </div>
-          <img className="sm:w-14 sm:h-14  w-10 h-10" src={CH1} alt="" />
-          <Link className="btn btn-ghost normal-case sm:text-3xl text-2xl font-serif font-bold">
+          <Link to="/">
+            <img className="sm:w-14 sm:h-14  w-10 h-10" src={CH1} alt="" />
+          </Link>
+          <Link
+            to="/"
+            className="btn btn-ghost normal-case sm:text-3xl text-xl font-serif font-bold"
+          >
             Course Hero
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal p-0">
             <li>
-              <Link>Courses</Link>
+              <Link className="sm:text-xl font-serif" to="/courses">
+                Courses
+              </Link>
             </li>
             <li>
-              <Link>FAQ</Link>
+              <Link className="sm:text-xl font-serif" to="/faq">
+                FAQ
+              </Link>
             </li>
             <li>
-              <Link>Blog</Link>
+              <Link className="sm:text-xl font-serif" to="/blog">
+                Blog
+              </Link>
             </li>
           </ul>
         </div>
@@ -100,7 +111,9 @@ const Nav = () => {
               </svg>
             </label>
           </div>
-          <Link className="btn ml-5">LogIn</Link>
+          <Link className="btn ml-5" to="/login">
+            LogIn
+          </Link>
         </div>
       </div>
     </div>
