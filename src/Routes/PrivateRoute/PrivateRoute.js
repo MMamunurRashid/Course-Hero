@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { TailSpin } from "react-loader-spinner";
 import { Navigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../../Contexts/AuthProvider/AuthProvider";
 
@@ -8,9 +9,18 @@ const PrivateRoute = ({ children }) => {
 
   if (loading) {
     return (
-      <>
-        <button className="btn btn-square loading"></button>
-      </>
+      <div className="flex justify-center mt-32 mb-32">
+        <TailSpin
+          height="80"
+          width="80"
+          color="#4fa94d"
+          ariaLabel="tail-spin-loading"
+          radius="1"
+          wrapperStyle={{}}
+          wrapperClass=""
+          visible={true}
+        />
+      </div>
     );
   }
 

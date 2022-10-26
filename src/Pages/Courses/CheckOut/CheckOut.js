@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
+import { AuthContext } from "../../../Contexts/AuthProvider/AuthProvider";
 
 const CheckOut = () => {
-  const { name } = useLoaderData();
+  const { user } = useContext(AuthContext);
+  const { name, details } = useLoaderData();
   console.log(name);
   return (
-    <div>
-      CheckOut
-      <h1>Course Name: {name}</h1>
+    <div className="text-center sm:mx-32 sm:mb-32 mt-5 m-2">
+      <h1 className="text-xl  text-white ">
+        Congratulations{" "}
+        <span className="text-xl text-orange-600 font-serif font-semibold">
+          {user.displayName}
+        </span>{" "}
+      </h1>
+      <p>Now You're successfully a premium learner of Course Hero</p>
+      <p>
+        You're enroll for our <strong>{name}</strong> course
+      </p>
+      <h1>Happy Learning 🥰</h1>
     </div>
   );
 };

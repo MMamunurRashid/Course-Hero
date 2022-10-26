@@ -6,6 +6,18 @@ const EachCourse = () => {
 
   return (
     <div className="sm:mx-32 sm:mb-32 mt-5 ">
+      <div className="flex justify-between items-center w-3/5 m-auto mt-5 mb-3">
+        <h2 className="card-title text-white text-2xl font-serif font-semibold">
+          Course Name: {name}
+        </h2>
+        <Link
+          to="/react-to-pdf"
+          className="tooltip "
+          data-tip="Download Course Information"
+        >
+          <button className="btn">Download</button>
+        </Link>
+      </div>
       <div className="card sm:w-1/2 m-auto bg-base-100 shadow-xl">
         <figure>
           <img className="rounded-xl" src={picture} alt="Shoes" />
@@ -18,7 +30,11 @@ const EachCourse = () => {
           <p>Why we need to learn {name}?</p>
           <p>{details}</p>
           <div className="card-actions justify-end">
-            <Link to={`/checkout/${id}`}>
+            <Link
+              to={`/checkout/${id}`}
+              className="tooltip "
+              data-tip="Click for get premium access"
+            >
               <button className="btn btn-primary">Get Premium Access</button>
             </Link>
           </div>
