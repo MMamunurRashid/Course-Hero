@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import CourseHero from "../../assets/banner/CourseHero.png";
 const Home = () => {
   return (
@@ -8,7 +9,7 @@ const Home = () => {
         Welcome to Course Hero
       </h1>
       <p>The Learning platform</p>
-      <p className="text-lg">
+      <p className="text-lg mb-10">
         This is the website, where you can get many more Computer Science and
         Engineering Courses. If you want be a good CSE graduate you have learn
         course like - Theory of computation, Computer Architecture, Operating
@@ -16,6 +17,11 @@ const Home = () => {
         Yes you are in the right place. We have these course, and we confident
         enough we can able to teach you these course. Be with US.
       </p>
+      <Link to={`/courses`}>
+        <small className="text-xl  border-0 bg-indigo-600 hover:bg-indigo-300 text-white font-semibold rounded-xl px-12 py-1">
+          Explore Our Courses
+        </small>
+      </Link>
     </div>
   );
 };

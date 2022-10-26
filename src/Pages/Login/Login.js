@@ -1,10 +1,12 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../../Contexts/AuthProvider/AuthProvider";
 import { GoogleAuthProvider, GithubAuthProvider } from "firebase/auth";
 
 const Login = () => {
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
   const { signIn, googleLogin, githubLogin } = useContext(AuthContext);
   const googleProvider = new GoogleAuthProvider();
   const githubProvider = new GithubAuthProvider();
@@ -37,12 +39,20 @@ const Login = () => {
         const user = result.user;
         console.log(user);
         form.reset();
+        setError("");
+        setSuccess("Log In Successful!!");
       })
-      .catch((error) => console.error(error));
+      .catch((error) => {
+        console.error(error);
+        setError(error.message);
+        setSuccess(false);
+      });
   };
   return (
     <div className="w-4/5 m-auto  text-center ">
       <h1 className="text-5xl mb-10 mt-5">Please Login</h1>
+      <p className=" text-red-600">{error}</p>
+      <p className="text-slate-50">{success}</p>
       <form onSubmit={handleSubmit}>
         <div className="form-control w-full max-w-xs m-auto">
           <label className="label">

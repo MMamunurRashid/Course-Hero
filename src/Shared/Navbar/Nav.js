@@ -133,18 +133,18 @@ const Nav = () => {
               data-tip={user.displayName}
             >
               <img
-                className=" mask mask-circle w-12 h-12"
+                className=" mask mask-circle w-12 h-12 sm:ml-4"
                 src={user.photoURL}
                 alt=""
               />
             </div>
           ) : (
-            <Link className="btn ml-5" to="/login">
+            <Link className="btn ml-1 sm:ml-4" to="/login">
               LogIn
             </Link>
           )}
           {user ? (
-            <Link onClick={handleLogOut} className="btn ml-5" to="">
+            <Link onClick={handleLogOut} className="btn ml-1 sm:ml-4" to="">
               Logout
             </Link>
           ) : (
