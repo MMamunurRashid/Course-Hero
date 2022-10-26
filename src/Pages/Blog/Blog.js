@@ -17,7 +17,6 @@ const Blog = () => {
           Cross-Origin Resource Sharing (CORS):
         </p>
         <p className="sm:text-lg">
-          {" "}
           is an <strong>HTTP</strong> -header based mechanism that allows a
           server to indicate any origins (domain, scheme, or port) other than
           its own from which a browser should permit loading resources.
