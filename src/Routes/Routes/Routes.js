@@ -23,9 +23,8 @@ export const routes = createBrowserRouter([
       {
         path: "/course/:id",
         element: <EachCourse></EachCourse>,
-        loader: ({ params }) => {
-          fetch(`https://course-hero-server.vercel.app/course/${params.id}`);
-        },
+        loader: ({ params }) =>
+          fetch(`https://course-hero-server.vercel.app/course/${params.id}`),
       },
       {
         path: "/login",

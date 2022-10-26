@@ -1,4 +1,3 @@
-import { error } from "daisyui/src/colors";
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Contexts/AuthProvider/AuthProvider";
@@ -64,7 +63,7 @@ const Register = () => {
       <form onSubmit={handleSubmit}>
         <div className="form-control w-full max-w-xs m-auto">
           <label className="label">
-            <span className="label-text">Name</span>
+            <span className="label-text">Full Name</span>
           </label>
           <input
             type="text"
