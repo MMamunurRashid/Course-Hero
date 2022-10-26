@@ -21,6 +21,8 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        setSuccess("Log In Successful!!");
+        navigate(from, { replace: true });
       })
       .catch((error) => console.error(error));
   };
@@ -30,6 +32,8 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        setSuccess("Log In Successful!!");
+        navigate(from, { replace: true });
       })
       .catch((error) => console.error(error));
   };
@@ -56,7 +60,7 @@ const Login = () => {
   };
   return (
     <div className="w-4/5 m-auto  text-center ">
-      <h1 className="text-5xl mb-10 mt-5">Please Login</h1>
+      <h1 className=" text-2xl sm:text-5xl mb-10 mt-5">Please Login</h1>
       <p className=" text-red-600">{error}</p>
       <p className="text-slate-50">{success}</p>
       <form onSubmit={handleSubmit}>

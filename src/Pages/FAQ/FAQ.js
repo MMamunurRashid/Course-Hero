@@ -2,14 +2,14 @@ import React from "react";
 
 const FAQ = () => {
   return (
-    <div className="sm:mx-32 sm:mb-32 mt-5">
+    <div className="sm:mx-32 sm:mb-32 mx-2 mt-5">
       {/* FAQ for course 1 */}
       <div className="mt-5">
         <h1 className="text-xl sm:text-xl font-serif font-semibold mb-3  text-white">
           Why we need to learn <strong>Theory of Computation</strong> ?
         </h1>
         <img
-          className="bg-white sm:w-2/5 h-60 rounded-xl"
+          className="bg-white sm:w-2/5 w-full h-60 rounded-xl"
           src="https://edurev.gumlet.io/AllImages/original/ApplicationImages/CourseImages/27ddebfb-99cc-4a54-991c-74706241a3b6_CI.png"
           alt=""
         />
@@ -29,7 +29,7 @@ const FAQ = () => {
           Why we need to learn <strong>Compiler Design</strong> ?
         </h1>
         <img
-          className="bg-white sm:w-2/5 h-60 rounded-xl"
+          className="bg-white sm:w-2/5 w-full h-60 rounded-xl"
           src="https://edurev.gumlet.io/AllImages/original/ApplicationImages/CourseFeatureImage/24f09887-9bea-45d8-b7ac-2884efeb1e30_CF.png?w=200&dpr=2.6"
           alt=""
         />
@@ -55,7 +55,7 @@ const FAQ = () => {
           Why we need to learn <strong>System analysis and design</strong> ?
         </h1>
         <img
-          className="bg-white sm:w-2/5 h-60 rounded-xl"
+          className="bg-white sm:w-2/5 w-full  h-60 rounded-xl"
           src="https://www.excellentassignmenthelp.com.au/wp-content/uploads/ICT103-Systems-Analysis-Design.jpg"
           alt=""
         />
@@ -76,7 +76,7 @@ const FAQ = () => {
           Why we need to learn <strong>Programming in C</strong> ?
         </h1>
         <img
-          className="bg-white sm:w-2/5 h-60 rounded-xl"
+          className="bg-white sm:w-2/5 w-full  h-60 rounded-xl"
           src="https://contentstatic.techgig.com/photo/90325682.cms"
           alt=""
         />
@@ -97,7 +97,7 @@ const FAQ = () => {
           Why we need to learn <strong>Programming In C++</strong> ?
         </h1>
         <img
-          className="bg-white sm:w-2/5 h-60 rounded-xl"
+          className="bg-white sm:w-2/5 w-full  h-60 rounded-xl"
           src="https://yourstelecast.com/wp-content/uploads/2021/09/where-to-get-c-programming-help-at-a-reasonable-price.png"
           alt=""
         />
@@ -115,7 +115,7 @@ const FAQ = () => {
           Why we need to learn <strong>Visual Programming in C#</strong> ?
         </h1>
         <img
-          className="bg-white sm:w-2/5 h-60 rounded-xl"
+          className="bg-white sm:w-2/5 w-full  h-60 rounded-xl"
           src="https://www.avenga.com/wp-content/uploads/2020/11/C-Sharp.png"
           alt=""
         />
@@ -143,7 +143,7 @@ const FAQ = () => {
           Why we need to learn <strong>Programming in Java</strong> ?
         </h1>
         <img
-          className="bg-white sm:w-2/5 h-60 rounded-xl"
+          className="bg-white sm:w-2/5 w-full  h-60 rounded-xl"
           src="https://5.imimg.com/data5/QQ/CT/AO/GLADMIN-25397883/selection-064-500x500.png"
           alt=""
         />
@@ -161,7 +161,7 @@ const FAQ = () => {
           Why we need to learn <strong>Computer Architecture</strong> ?
         </h1>
         <img
-          className="bg-white sm:w-2/5 h-60 rounded-xl"
+          className="bg-white sm:w-2/5 w-full  h-60 rounded-xl"
           src="https://miro.medium.com/max/700/0*pPgqu6f2zz76HrQE.jpg"
           alt=""
         />
@@ -179,7 +179,7 @@ const FAQ = () => {
           Why we need to learn <strong>Operating System</strong> ?
         </h1>
         <img
-          className="bg-white sm:w-2/5 h-60 rounded-xl"
+          className="bg-white sm:w-2/5 w-full  h-60 rounded-xl"
           src="https://funxim.net/wp-content/uploads/2021/11/types-of-operating-system.jpg"
           alt=""
         />

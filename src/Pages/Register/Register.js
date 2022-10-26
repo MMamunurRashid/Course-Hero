@@ -61,7 +61,7 @@ const Register = () => {
   };
   return (
     <div className="w-4/5 m-auto  text-center ">
-      <h1 className="text-5xl mb-10 mt-5">Please Register</h1>
+      <h1 className=" text-2xl sm:text-5xl mb-10 mt-5">Please Register</h1>
       <p className=" text-red-600">{error}</p>
       <p className="text-slate-50">{success}</p>
       <form onSubmit={handleSubmit}>
