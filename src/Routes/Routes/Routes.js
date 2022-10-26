@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../../LayOut/Main";
 import Blog from "../../Pages/Blog/Blog";
+import CheckOut from "../../Pages/Courses/CheckOut/CheckOut";
 import Courses from "../../Pages/Courses/Courses/Courses";
 import EachCourse from "../../Pages/Courses/EachCourse/EachCourse";
 import FAQ from "../../Pages/FAQ/FAQ";
@@ -30,6 +31,12 @@ export const routes = createBrowserRouter([
       {
         path: "/course/:id",
         element: <EachCourse></EachCourse>,
+        loader: ({ params }) =>
+          fetch(`https://course-hero-server.vercel.app/course/${params.id}`),
+      },
+      {
+        path: "/checkout/:id",
+        element: <CheckOut></CheckOut>,
         loader: ({ params }) =>
           fetch(`https://course-hero-server.vercel.app/course/${params.id}`),
       },

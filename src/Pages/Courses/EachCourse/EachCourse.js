@@ -1,8 +1,8 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const EachCourse = () => {
   const course = useLoaderData();
-  const { name, picture, details, price } = course;
+  const { name, picture, details, price, id } = course;
 
   return (
     <div className="sm:mx-32 sm:mb-32 mt-5 ">
@@ -18,7 +18,9 @@ const EachCourse = () => {
           <p>Why we need to learn {name}?</p>
           <p>{details}</p>
           <div className="card-actions justify-end">
-            <button className="btn btn-primary">Get Premium Access</button>
+            <Link to={`/checkout/${id}`}>
+              <button className="btn btn-primary">Get Premium Access</button>
+            </Link>
           </div>
         </div>
       </div>
