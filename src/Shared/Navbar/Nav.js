@@ -37,6 +37,9 @@ const Nav = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
+                <Link to="/home">Home</Link>
+              </li>
+              <li>
                 <Link to="/courses">Courses</Link>
               </li>
               <li>
@@ -80,6 +83,11 @@ const Nav = () => {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal p-0">
+            <li>
+              <Link className="sm:text-xl font-serif" to="/home">
+                Home
+              </Link>
+            </li>
             <li>
               <Link className="sm:text-xl font-serif" to="/courses">
                 Courses
