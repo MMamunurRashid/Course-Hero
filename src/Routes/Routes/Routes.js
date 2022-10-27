@@ -10,7 +10,7 @@ import Login from "../../Pages/Login/Login";
 import NotFound from "../../Pages/NotFound/NotFound";
 import Register from "../../Pages/Register/Register";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
-
+import Download from "../../Pages/Courses/ReactToPdf/Download";
 export const routes = createBrowserRouter([
   {
     path: "/",
@@ -60,6 +60,12 @@ export const routes = createBrowserRouter([
       {
         path: "/faq",
         element: <FAQ></FAQ>,
+      },
+      {
+        path: "/react-to-pdf/:id",
+        element: <Download></Download>,
+        loader: ({ params }) =>
+          fetch(`https://course-hero-server.vercel.app/course/${params.id}`),
       },
       { path: "*", element: <NotFound></NotFound> },
     ],

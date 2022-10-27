@@ -12,8 +12,8 @@ const EachCourse = () => {
           Course Name: {name}
         </h2>
         <Link
-          to="/react-to-pdf"
-          className="sm:tooltip sm:tooltip-top"
+          to={`/react-to-pdf/${id}`}
+          className="tooltip tooltip-left"
           data-tip="Download Course Information"
         >
           <button className="btn">Download</button>
