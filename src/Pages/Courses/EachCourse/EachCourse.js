@@ -21,7 +21,7 @@ const EachCourse = () => {
       </div>
       <div className="card sm:w-1/2  m-auto bg-base-100 shadow-xl">
         <figure>
-          <img className="rounded-xl w-11/12" src={picture} alt="Shoes" />
+          <img className="rounded-xl w-11/12 h-60" src={picture} alt="Shoes" />
         </figure>
         <div className="card-body">
           <h2 className="card-title text-white text-xl sm:text-2xl font-serif font-semibold">

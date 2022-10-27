@@ -4,13 +4,15 @@ import { useLoaderData } from "react-router-dom";
 import Pdf from "react-to-pdf";
 
 const ref = React.createRef();
-
+const options = {
+  orientation: "landscape",
+};
 export default function Download() {
   const course = useLoaderData();
-  const { name, picture, details, price } = course;
+  const { name, picture, price } = course;
   return (
     <div className="App">
-      <Pdf targetRef={ref} filename="code-example.pdf">
+      <Pdf targetRef={ref} filename={`${name}.pdf`} options={options}>
         {({ toPdf }) => (
           <button className="btn mt-5 mb-5" onClick={toPdf}>
             DownLoad
@@ -18,9 +20,13 @@ export default function Download() {
         )}
       </Pdf>
       <div ref={ref}>
-        <div className="card sm:w-1/2  m-auto bg-base-100 shadow-xl">
+        <div className="card sm:w-1/2  m-auto bg-base-100 shadow-xl ">
           <figure>
-            <img className="rounded-xl w-11/12" src={picture} alt="Shoes" />
+            <img
+              className="rounded-xl w-11/12 h-72"
+              src={picture}
+              alt="courses"
+            />
           </figure>
           <div className="card-body">
             <h2 className="card-title text-white text-xl sm:text-2xl font-serif font-semibold">
