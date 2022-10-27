@@ -1,6 +1,7 @@
 import { Link, useLoaderData } from "react-router-dom";
 
 const EachCourse = () => {
+  //load/fetch data via loader
   const course = useLoaderData();
   const { name, picture, details, price, id } = course;
 

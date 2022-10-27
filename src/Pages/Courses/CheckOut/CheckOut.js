@@ -3,9 +3,10 @@ import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../../Contexts/AuthProvider/AuthProvider";
 
 const CheckOut = () => {
+  //import user from AuthContext
   const { user } = useContext(AuthContext);
-  const { name, details } = useLoaderData();
-  console.log(name);
+  const { name } = useLoaderData();
+
   return (
     <div className="text-center sm:mx-32 sm:mb-32 mt-5 m-2">
       <h1 className="text-xl  text-white ">

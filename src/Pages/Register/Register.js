@@ -3,11 +3,14 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../Contexts/AuthProvider/AuthProvider";
 
 const Register = () => {
+  //state for showing error and success message.
   const [error, setError] = useState(" ");
   const [success, setSuccess] = useState("");
 
+  //import AuthContext
   const { createUser, updateUserProfile } = useContext(AuthContext);
 
+  // handle email password auth registration form
   const handleSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -17,6 +20,7 @@ const Register = () => {
     const password = form.password.value;
     console.log(name, photoURL, email, password);
 
+    //regular expression
     if (!/(?=.*[A-Z].*[A-Z])/.test(password)) {
       setError("Please use at least 2 uppercase");
       return;
@@ -31,6 +35,7 @@ const Register = () => {
     }
     setError("");
 
+    // createUser with email password
     createUser(email, password)
       .then((result) => {
         const user = result.user;

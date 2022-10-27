@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Course = ({ course }) => {
+  //import course data via props. useLoaderData() is in Courses file.
   const { id, name, picture, price } = course;
   return (
     <div className="mb-5">

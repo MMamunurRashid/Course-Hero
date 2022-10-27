@@ -4,9 +4,11 @@ import { Navigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../../Contexts/AuthProvider/AuthProvider";
 
 const PrivateRoute = ({ children }) => {
+  // import user,loading from authContext
   const { user, loading } = useContext(AuthContext);
   const location = useLocation();
 
+  //show loading in private route.
   if (loading) {
     return (
       <div className="flex justify-center mt-32 mb-32">

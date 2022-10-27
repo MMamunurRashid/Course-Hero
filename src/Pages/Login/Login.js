@@ -5,17 +5,21 @@ import { AuthContext } from "../../Contexts/AuthProvider/AuthProvider";
 import { GoogleAuthProvider, GithubAuthProvider } from "firebase/auth";
 
 const Login = () => {
+  //state for showing error and success message.
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
+  //navigate the path,  before login after login.
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
 
+  //import AuthContext, and implement github, google , email pass login.
   const { signIn, googleLogin, githubLogin } = useContext(AuthContext);
   const googleProvider = new GoogleAuthProvider();
   const githubProvider = new GithubAuthProvider();
 
+  //handle google login auth
   const handleGoogleLogin = () => {
     googleLogin(googleProvider)
       .then((result) => {
@@ -27,6 +31,7 @@ const Login = () => {
       .catch((error) => console.error(error));
   };
 
+  //handle github login auth
   const handleGitHubLogin = () => {
     githubLogin(githubProvider)
       .then((result) => {
@@ -37,6 +42,8 @@ const Login = () => {
       })
       .catch((error) => console.error(error));
   };
+
+  //handle email pass auth
   const handleSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
