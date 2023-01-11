@@ -9,7 +9,7 @@ const CheckOut = () => {
 
   return (
     <div className="text-center sm:mx-32 sm:mb-32 mt-5 m-2">
-      <h1 className="text-xl  text-white ">
+      <h1 className="text-xl   ">
         Congratulations{" "}
         <span className="text-xl text-orange-600 font-serif font-semibold">
           {user.displayName}

@@ -14,7 +14,7 @@ export default function Download() {
     <div className="App">
       <Pdf targetRef={ref} filename={`${name}.pdf`} options={options}>
         {({ toPdf }) => (
-          <button className="btn mt-5 mb-5" onClick={toPdf}>
+          <button className="btn hover:text-white mt-5 mb-5" onClick={toPdf}>
             DownLoad
           </button>
         )}
@@ -29,12 +29,10 @@ export default function Download() {
             />
           </figure>
           <div className="card-body">
-            <h2 className="card-title text-white text-xl sm:text-2xl font-serif font-semibold">
+            <h2 className="card-title  text-xl sm:text-2xl font-serif font-semibold">
               Course Name: {name}
             </h2>
-            <p className="text-lg sm:text-xl text-white">
-              Course Fee: {price} BDT
-            </p>
+            <p className="text-lg sm:text-xl ">Course Fee: {price} BDT</p>
           </div>
         </div>
       </div>

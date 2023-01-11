@@ -18,7 +18,7 @@ const Sidebar = () => {
       {courses.map((c) => (
         <p
           key={c.id}
-          className="text-xl text-white border rounded-lg mb-2 p-2 hover:bg-blue-900"
+          className="text-xl  border rounded-lg mb-2 p-2 hover:bg-blue-900"
         >
           <Link to={`/course/${c.id}`}>{c.name}</Link>
         </p>

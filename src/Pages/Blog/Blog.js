@@ -5,7 +5,7 @@ const Blog = () => {
     <div className="sm:mx-32 mx-2 mb-5">
       {/* Question 1 */}
       <div className="mt-3">
-        <h1 className="text-xl sm:text-3xl font-serif font-semibold mb-3  text-white">
+        <h1 className="text-xl sm:text-3xl font-serif font-semibold mb-3  ">
           What is cors ?
         </h1>
         <img
@@ -13,7 +13,7 @@ const Blog = () => {
           src="https://www.keycdn.com/img/support/cors.png"
           alt=""
         />
-        <p className="text-lg sm:text-xl text-white font-semibold mt-3">
+        <p className="text-lg sm:text-xl  font-semibold mt-3">
           Cross-Origin Resource Sharing (CORS):
         </p>
         <p className="sm:text-lg">
@@ -31,13 +31,11 @@ const Blog = () => {
       </div>
       {/* Question 2 */}
       <div className="mt-8">
-        <h1 className="text-xl sm:text-3xl font-serif font-semibold mb-3  text-white">
+        <h1 className="text-xl sm:text-3xl font-serif font-semibold mb-3  ">
           Why are you using <strong>Firebase</strong> ? What other options do
           you have to implement authentication?
         </h1>
-        <h3 className="text-lg sm:text-xl text-white font-semibold">
-          Firebase
-        </h3>
+        <h3 className="text-lg sm:text-xl  font-semibold">Firebase</h3>
         <p className="sm:text-lg">
           <strong>Firebase Authentication</strong> provides backend services,
           easy-to-use SDKs, and ready-made UI libraries to authenticate users to
@@ -45,7 +43,7 @@ const Blog = () => {
           popular federated identity providers like{" "}
           <strong>Google, Facebook and Twitter</strong>, and more.
         </p>
-        <h3 className="text-lg sm:text-xl text-white font-semibold mt-3">
+        <h3 className="text-lg sm:text-xl  font-semibold mt-3">
           What are the other options to do implement authentication ?
         </h3>
         <p className="sm:text-lg">
@@ -55,7 +53,7 @@ const Blog = () => {
       </div>
       {/* Question 3 */}
       <div className="mt-8">
-        <h1 className="text-xl sm:text-3xl font-serif font-semibold mb-3  text-white">
+        <h1 className="text-xl sm:text-3xl font-serif font-semibold mb-3  ">
           How does the private route work?
         </h1>
         <p className="sm:text-lg">
@@ -68,7 +66,7 @@ const Blog = () => {
       </div>
       {/* Question 4 */}
       <div className="mt-8">
-        <h1 className="text-xl sm:text-3xl font-serif font-semibold mb-3  text-white">
+        <h1 className="text-xl sm:text-3xl font-serif font-semibold mb-3  ">
           What is Node? How does Node work?
         </h1>
         <img
@@ -76,7 +74,7 @@ const Blog = () => {
           src="https://kinsta.com/wp-content/uploads/2021/03/Nodejs-Architecture.png"
           alt=""
         />
-        <h3 className="text-lg sm:text-xl text-white font-semibold mt-3">
+        <h3 className="text-lg sm:text-xl  font-semibold mt-3">
           What is Node ?
         </h3>
         <p className="sm:text-lg">
@@ -85,7 +83,7 @@ const Blog = () => {
           <strong> library</strong> for running web applications outside the
           client's browser.
         </p>
-        <h3 className="text-lg sm:text-xl text-white font-semibold mt-3">
+        <h3 className="text-lg sm:text-xl  font-semibold mt-3">
           How does Node work?
         </h3>
         <p className="sm:text-lg">

@@ -100,17 +100,23 @@ const Login = () => {
           </Link>
         </p>
         <div className="mt-5 mb-10">
-          <button type="submit" className="btn btn-outline">
+          <button type="submit" className="btn hover:text-white btn-outline">
             Login
           </button>
         </div>
       </form>
 
       <div className="btn-group btn-group-vertical mb-10">
-        <button onClick={handleGoogleLogin} className="btn btn-primary mt-2">
+        <button
+          onClick={handleGoogleLogin}
+          className="btn hover:text-white btn-primary mt-2"
+        >
           <FaGoogle className="mr-3 w-6 h-6" /> Login with Google
         </button>
-        <button onClick={handleGitHubLogin} className="btn btn-primary mt-2">
+        <button
+          onClick={handleGitHubLogin}
+          className="btn hover:text-white btn-primary mt-2"
+        >
           <FaGithub className="mr-3 w-6 h-6" /> Login with GitHub
         </button>
       </div>

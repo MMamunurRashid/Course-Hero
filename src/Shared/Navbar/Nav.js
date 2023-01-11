@@ -16,7 +16,10 @@ const Nav = () => {
       <div className="navbar bg-primary text-primary-content sm:px-20 pr-4">
         <div className="navbar-start">
           <div className="dropdown">
-            <label tabIndex={0} className="btn btn-ghost lg:hidden">
+            <label
+              tabIndex={0}
+              className="btn hover:text-white btn-ghost lg:hidden"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -76,7 +79,7 @@ const Nav = () => {
           </Link>
           <Link
             to="/"
-            className="btn btn-ghost normal-case sm:text-3xl text-xl font-serif font-bold"
+            className="btn hover:text-white btn-ghost normal-case sm:text-3xl text-xl font-serif font-bold"
           >
             Course Hero
           </Link>
@@ -139,12 +142,16 @@ const Nav = () => {
               />
             </div>
           ) : (
-            <Link className="btn ml-1 sm:ml-4" to="/login">
+            <Link className="btn hover:text-white ml-1 sm:ml-4" to="/login">
               LogIn
             </Link>
           )}
           {user ? (
-            <Link onClick={handleLogOut} className="btn ml-1 sm:ml-4" to="">
+            <Link
+              onClick={handleLogOut}
+              className="btn hover:text-white ml-1 sm:ml-4"
+              to=""
+            >
               Logout
             </Link>
           ) : (

@@ -122,7 +122,7 @@ const Register = () => {
           </Link>
         </p>
         <div className="mt-5 mb-10">
-          <button type="submit" className="btn btn-outline">
+          <button type="submit" className="btn hover:text-white btn-outline">
             Register
           </button>
         </div>

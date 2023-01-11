@@ -5,7 +5,7 @@ const FAQ = () => {
     <div className="sm:mx-32 sm:mb-32 mx-2 mt-5">
       {/* FAQ for course 1 */}
       <div className="mt-5">
-        <h1 className="text-xl sm:text-xl font-serif font-semibold mb-3  text-white">
+        <h1 className="text-xl sm:text-xl font-serif font-semibold mb-3  ">
           Why we need to learn <strong>Theory of Computation</strong> ?
         </h1>
         <img
@@ -25,7 +25,7 @@ const FAQ = () => {
       </div>
       {/* FAQ for course 2 */}
       <div className="mt-5">
-        <h1 className="text-xl sm:text-xl font-serif font-semibold mb-3  text-white">
+        <h1 className="text-xl sm:text-xl font-serif font-semibold mb-3  ">
           Why we need to learn <strong>Compiler Design</strong> ?
         </h1>
         <img
@@ -51,7 +51,7 @@ const FAQ = () => {
 
       {/* FAQ for course 3 */}
       <div className="mt-5">
-        <h1 className="text-xl sm:text-xl font-serif font-semibold mb-3  text-white">
+        <h1 className="text-xl sm:text-xl font-serif font-semibold mb-3  ">
           Why we need to learn <strong>System analysis and design</strong> ?
         </h1>
         <img
@@ -72,7 +72,7 @@ const FAQ = () => {
       </div>
       {/* FAQ for course 4 */}
       <div className="mt-5">
-        <h1 className="text-xl sm:text-xl font-serif font-semibold mb-3  text-white">
+        <h1 className="text-xl sm:text-xl font-serif font-semibold mb-3  ">
           Why we need to learn <strong>Programming in C</strong> ?
         </h1>
         <img
@@ -93,7 +93,7 @@ const FAQ = () => {
       </div>
       {/* FAQ for course 5 */}
       <div className="mt-5">
-        <h1 className="text-xl sm:text-xl font-serif font-semibold mb-3  text-white">
+        <h1 className="text-xl sm:text-xl font-serif font-semibold mb-3  ">
           Why we need to learn <strong>Programming In C++</strong> ?
         </h1>
         <img
@@ -111,7 +111,7 @@ const FAQ = () => {
       </div>
       {/* FAQ for course 6 */}
       <div className="mt-5">
-        <h1 className="text-xl sm:text-xl font-serif font-semibold mb-3  text-white">
+        <h1 className="text-xl sm:text-xl font-serif font-semibold mb-3  ">
           Why we need to learn <strong>Visual Programming in C#</strong> ?
         </h1>
         <img
@@ -139,7 +139,7 @@ const FAQ = () => {
       </div>
       {/* FAQ for course 7 */}
       <div className="mt-5">
-        <h1 className="text-xl sm:text-xl font-serif font-semibold mb-3  text-white">
+        <h1 className="text-xl sm:text-xl font-serif font-semibold mb-3  ">
           Why we need to learn <strong>Programming in Java</strong> ?
         </h1>
         <img
@@ -157,7 +157,7 @@ const FAQ = () => {
       </div>
       {/* FAQ for course 8 */}
       <div className="mt-5">
-        <h1 className="text-xl sm:text-xl font-serif font-semibold mb-3  text-white">
+        <h1 className="text-xl sm:text-xl font-serif font-semibold mb-3  ">
           Why we need to learn <strong>Computer Architecture</strong> ?
         </h1>
         <img
@@ -175,7 +175,7 @@ const FAQ = () => {
       </div>
       {/* FAQ for course 9 */}
       <div className="mt-5">
-        <h1 className="text-xl sm:text-xl font-serif font-semibold mb-3  text-white">
+        <h1 className="text-xl sm:text-xl font-serif font-semibold mb-3  ">
           Why we need to learn <strong>Operating System</strong> ?
         </h1>
         <img

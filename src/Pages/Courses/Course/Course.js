@@ -15,7 +15,9 @@ const Course = ({ course }) => {
           <p>Course Fee: {price}</p>
           <div className="card-actions justify-end">
             <Link to={`/course/${id}`}>
-              <button className="btn btn-primary">View Details</button>
+              <button className="btn hover:text-white btn-primary">
+                View Details
+              </button>
             </Link>
           </div>
         </div>

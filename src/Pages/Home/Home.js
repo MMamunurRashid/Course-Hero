@@ -5,9 +5,7 @@ const Home = () => {
   return (
     <div className="text-center mt-5 sm:mx-20 sm:mb-40 mx-5 mb-5">
       <img className="w-full rounded-lg" src={CourseHero} alt="" />
-      <h1 className="text-3xl font-serif mt-3 text-white">
-        Welcome to Course Hero
-      </h1>
+      <h1 className="text-3xl font-serif mt-3 ">Welcome to Course Hero</h1>
       <p>The Learning platform</p>
       <p className="text-lg mb-10">
         This is the website, where you can get many more Computer Science and
@@ -18,7 +16,7 @@ const Home = () => {
         enough we can able to teach you these course. Be with US.
       </p>
       <Link to={`/courses`}>
-        <small className="text-xl  border-0 bg-indigo-600 hover:bg-indigo-300 text-white font-semibold rounded-xl px-12 py-1">
+        <small className="text-xl  border-0 bg-indigo-600 hover:bg-indigo-300  font-semibold rounded-xl px-12 py-1">
           Explore Our Courses
         </small>
       </Link>
