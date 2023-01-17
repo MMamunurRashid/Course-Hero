@@ -16,7 +16,7 @@ const Home = () => {
         enough we can able to teach you these course. Be with US.
       </p>
       <Link to={`/courses`}>
-        <small className="text-xl  border-0 bg-indigo-600 hover:bg-indigo-300  font-semibold rounded-xl px-12 py-1">
+        <small className="text-xl  border-0 text-white bg-indigo-600 hover:bg-indigo-300  font-semibold rounded-xl px-12 py-1">
           Explore Our Courses
         </small>
       </Link>
